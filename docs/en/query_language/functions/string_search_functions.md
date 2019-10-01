@@ -49,7 +49,7 @@ Result:
 
 For a case-insensitive search, use the function [positionCaseInsensitiveUTF8](#positionCaseInsensitiveUTF8).
 
-## positionCaseInsensitiveUTF8 ##
+## positionCaseInsensitiveUTF8 {#positionCaseInsensitiveUTF8}
 
 Search for the substring `needle` in the string `haystack`. Unlike `positionUTF8`, `positionCaseInsensitiveUTF8` is case-insensitive. 
 
