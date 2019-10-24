@@ -85,6 +85,42 @@ SELECT toValidUTF8('\x61\xF0\x80\x80\x80b')
 └───────────────────────┘
 ```
 
+## repeat {#repeat}
+
+Replicates a string the specified number of times and concatenates the replicated values as a single string.
+
+**Syntax** (without SELECT)
+
+```sql
+repeat(s, n);
+```
+
+**Parameters**
+
+- `s` — The string to replicate. Can be both constant and non-constant. [String](../../data_types/string.md).
+- `n` — The number of times to replicate `s`. Can be both constant and non-constant. [UInt](../../data_types/int_uint.md#uint-ranges).
+
+**Returned value**
+
+Single string, containing `s`, repeated `n` times.
+
+Type: `String`.
+
+**Example**
+
+Query:
+
+```sql
+SELECT repeat('abc', 10);
+```
+
+Result:
+
+```text
+┌─repeat('abc', 10)──────────────┐
+│ abcabcabcabcabcabcabcabcabcabc │
+└────────────────────────────────┘
+```
 
 ## reverse
 
