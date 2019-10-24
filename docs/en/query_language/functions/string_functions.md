@@ -89,7 +89,7 @@ SELECT toValidUTF8('\x61\xF0\x80\x80\x80b')
 
 Replicates a string the specified number of times and concatenates the replicated values as a single string.
 
-**Syntax** (without SELECT)
+**Syntax**
 
 ```sql
 repeat(s, n);
