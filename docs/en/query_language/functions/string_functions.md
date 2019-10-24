@@ -98,7 +98,7 @@ repeat(s, n);
 **Parameters**
 
 - `s` — The string to replicate. Can be both constant and non-constant. [String](../../data_types/string.md).
-- `n` — The number of times to replicate `s`. Can be both constant and non-constant. [UInt](../../data_types/int_uint.md#uint-ranges).
+- `n` — The number of times to replicate `s`. Can be both constant and non-constant. [UInt](../../data_types/int_uint.md).
 
 **Returned value**
 
