@@ -318,51 +318,73 @@ SELECT bitmapCardinality(bitmapBuild([1, 2, 3, 4, 5])) AS res
 └─────┘
 ```
 
-## bitmapMin
+## bitmapMin {#bitmapmin}
 
-Retrun the smallest value of type UInt64 in the set, UINT32_MAX if the set is empty.
+Returns the smallest value in a bitmap.
 
+**Syntax**
 
-```
-bitmapMin(bitmap)
+```sql
+bitmapMin(bitmap);
 ```
 
 **Parameters**
 
-- `bitmap` – bitmap object.
+- `bitmap` — [Bitmap object](#bitmap_functions-bitmapbuild).
+
+**Returned value**
+
+- The smallest value in `bitmap`, if the set is not empty. Type: `UInt64`.
+- Maximum UInt32 number (4294967295), if the set is empty. Type: `UInt32`. 
+
 
 **Example**
 
-``` sql
+Query:
+
+```sql
 SELECT bitmapMin(bitmapBuild([1, 2, 3, 4, 5])) AS res
 ```
 
-```
+Result:
+
+```text
 ┌─res─┐
 │   1 │
 └─────┘
 ```
 
-## bitmapMax
+## bitmapMax {#bitmapmax}
 
-Retrun the greatest value of type UInt64 in the set, 0 if the set is empty.
+Returns the greatest value in a bitmap.
 
+**Syntax**
 
-```
-bitmapMax(bitmap)
+```sql
+bitmapMax(bitmap);
 ```
 
 **Parameters**
 
-- `bitmap` – bitmap object.
+- `bitmap` — [Bitmap object](#bitmap_functions-bitmapbuild).
+
+**Returned value**
+
+- The greatest value in `bitmap`, if the set is not empty. Type: `UInt64`.
+- 0, if the set is empty. Type: `UInt8`. 
+
 
 **Example**
 
-``` sql
+Query:
+
+```sql
 SELECT bitmapMax(bitmapBuild([1, 2, 3, 4, 5])) AS res
 ```
 
-```
+Result:
+
+```text
 ┌─res─┐
 │   5 │
 └─────┘
